@@ -105,6 +105,12 @@ body {
   }
 
   .hero-content h1 {
+    .hero {
+  background-image: url('images/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* or any height you need */
+}
     font-size: 24px;
   }
 
