@@ -1,0 +1,37 @@
+.our-results {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #ff4b2b, #ff416c);
+  color: #fff;
+  text-align: center;
+}
+
+.our-results .section-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.our-results .section-subtitle {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-bottom: 40px;
+}
+
+.results-grid .result-card {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.results-grid .result-card h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.results-grid .result-card p {
+  font-size: 1rem;
+  opacity: 0.85;
+}
+
+.results-grid .icon {
+  color: #fff;
+}
