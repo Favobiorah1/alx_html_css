@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'holberton_school-icon';
+  src: url('fonts/holberton_school-icon.woff2') format('woff2'),
+       url('fonts/holberton_school-icon.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.what-we-do {
+  padding: 60px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.what-we-do .section-title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card .icon {
+  font-family: 'holberton_school-icon';
+  font-size: 3rem;
+  color: #ff4b2b;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: #666;
+}
