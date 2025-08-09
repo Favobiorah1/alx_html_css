@@ -1,0 +1,97 @@
+/* Our Results pentagons - add to your main stylesheet */
+.our-results {
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(135deg,#ff4b2b 0%, #ff7a66 100%);
+  color: #fff;
+}
+
+.our-results .section-title { font-size: 2rem; margin-bottom: 6px; }
+.our-results .section-subtitle { opacity: 0.95; margin-bottom: 36px; }
+
+/* Grid */
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 28px;
+  align-items: center;
+  justify-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Outer wrapper to help spacing */
+.result-pentagon {
+  width: 100%;
+  max-width: 220px;
+}
+
+/* The pentagon shape using clip-path: polygon */
+/* Coordinates create a regular-ish upright pentagon */
+.pentagon-shape {
+  width: 100%;
+  padding-top: 100%; /* aspect ratio square -> becomes a square box */
+  position: relative;
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  -webkit-clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  background: linear-gradient(180deg, rgba(255,255,255,0.15), rgba(255,255,255,0.06));
+  display: block;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+}
+
+/* Center content inside the clipped shape */
+.pentagon-content {
+  position: absolute;
+  inset: 0; /* top:0 right:0 bottom:0 left:0 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 18px;
+}
+
+/* Number / stat */
+.pentagon-content .stat {
+  display: block;
+  font-size: 2.0rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.35);
+}
+
+/* Label below the stat */
+.pentagon-content .label {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.95);
+}
+
+/* Hover / focus effects */
+.pentagon-shape:hover,
+.pentagon-shape:focus-within {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 18px 30px rgba(0,0,0,0.28);
+}
+
+/* Make stats slightly bigger on larger screens */
+@media (min-width: 900px) {
+  .pentagon-content .stat { font-size: 2.4rem; }
+  .result-pentagon { max-width: 240px; }
+}
+
+/* Optional: different accent colors per pentagon (modify or remove) */
+.result-pentagon:nth-child(1) .pentagon-shape {
+  background: linear-gradient(180deg, rgba(255,255,255,0.18), rgba(255,255,255,0.03));
+}
+.result-pentagon:nth-child(2) .pentagon-shape {
+  background: linear-gradient(180deg, rgba(255,255,255,0.23), rgba(255,255,255,0.04));
+}
+.result-pentagon:nth-child(3) .pentagon-shape {
+  background: linear-gradient(180deg, rgba(255,255,255,0.20), rgba(255,255,255,0.02));
+}
+.result-pentagon:nth-child(4) .pentagon-shape {
+  background: linear-gradient(180deg, rgba(255,255

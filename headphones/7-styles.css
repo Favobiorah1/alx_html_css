@@ -1,0 +1,28 @@
+/* Common animated item styles */
+.animated-item {
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  cursor: pointer;
+}
+
+/* Scale and rotate on hover */
+.animated-item:hover {
+  transform: scale(1.1) rotate(3deg);
+  opacity: 0.9;
+}
+
+/* Continuous bounce animation */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* Apply bounce to results items */
+.results-section .pentagon {
+  animation: bounce 2s infinite ease-in-out;
+}
+
+/* Pause bounce when hovering */
+.results-section .pentagon:hover {
+  animation-play-state: paused;
+  transform: scale(1.1) rotate(5deg);
+}
